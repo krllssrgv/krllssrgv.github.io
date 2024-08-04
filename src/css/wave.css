@@ -1,0 +1,21 @@
+.wave {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(0);
+    pointer-events: none;
+    animation: wave .5s linear;
+}
+
+
+@keyframes wave {
+    from {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}

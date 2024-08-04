@@ -2,12 +2,306 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link rel="icon" type="image/png" href="/src/assets/icons/js.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kirill Savin - Summary</title>
+    <link rel="stylesheet" href="/src/css/main.css" />
+    <link rel="stylesheet" href="/src/css/wave.css" />
+    <link rel="stylesheet" href="/src/css/inputs.css">
+    <link rel="stylesheet" href="/src/css/blocks/me.css" />
+    <link rel="stylesheet" href="/src/css/blocks/languages.css" />
+    <link rel="stylesheet" href="/src/css/blocks/experience.css" />
+    <link rel="stylesheet" href="/src/css/blocks/tools.css" />
+    <link rel="stylesheet" href="/src/css/blocks/education.css" />
+    <link rel="stylesheet" href="/src/css/blocks/interests.css" />
+    <link rel="stylesheet" href="/src/css/blocks/mail.css" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="./js/main.js"></script>
+    <header>
+      <div class="header__buttons" id="on_change">
+        <button id="save_button">Сохранить</button>
+      </div>
+
+      <div class="header__buttons" id="off_change">
+        <button id="pdf_button">Скачать PDF</button>
+			  <button id="change_button">Изменить текст</button>
+        <button id="reset_button">Сброс</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="partition image">
+        <img src="/src/assets/images/me.jpg" alt="Мое фото" />
+      </div>
+
+      <div class="partition me">
+        <div class="me__greetings">Hello 👋🏻 I’m</div>
+
+        <div>
+          <div id="name" class="me__name changed" data-max="12">
+            Kirill Savin
+          </div>
+          <div id="position" class="me__frontend changed" data-max="14">
+            Frontend Dev
+          </div>
+        </div>
+      </div>
+
+      <section class="languages">
+        <h2 class="title">Languages</h2>
+
+        <div class="languages__data">
+          <div class="languages__names">
+            <div id="russian" class="changed" data-max="10">Русский</div>
+            <div id="english" class="changed" data-max="10">English</div>
+          </div>
+
+          <div class="languages__levels">
+            <div style="width: 100%"></div>
+            <div style="width: 50%"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience">
+        <h2 class="title">Experience</h2>
+
+        <div class="experience__block experience__block--recent">
+          <div class="experience__block-most">most recent</div>
+          <div class="experience__block-date changed" id="firstExpDate">
+            Январь 2024 - Текущий момент
+          </div>
+          <div class="experience__block-content">
+            <div class="experience__block-left">
+              <div
+                class="experience__block-title changed"
+                id="firstExpPosition"
+              >
+                Frontend разработчик
+              </div>
+              <div class="experience__block-subtitle changed" id="firstExpType">
+                Внутриинститутский проект
+              </div>
+            </div>
+
+            <ul class="experience__block-right">
+              <li class="experience__block-li changed" id="firstExp1">
+                Веб-приложение на React
+              </li>
+              <li class="experience__block-li changed" id="firstExp2">
+                Single Page Application with using React-Router-Dom
+              </li>
+              <li class="experience__block-li changed" id="firstExp3">
+                Использование архитектуры Feature-Sliced Design
+              </li>
+              <li class="experience__block-li changed" id="firstExp4">
+                Продукт для Soft Skills Lab НИУ ВШЭ
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="experience__block">
+          <div class="experience__block-date changed" id="secondExpDate">
+            Июнь 2024 - Июль 2024
+          </div>
+          <div class="experience__block-content">
+            <div class="experience__block-left">
+              <div
+                class="experience__block-title changed"
+                id="secondExpPosition"
+              >
+                Fullstack разработчик
+              </div>
+              <div
+                class="experience__block-subtitle changed"
+                id="secondExpType"
+              >
+                pet-проект
+              </div>
+            </div>
+
+            <ul class="experience__block-right">
+              <li class="experience__block-li changed" id="secondExp1">
+                Веб-приложение для занятий по программе "50 подягиваний за 7
+                (или 14) недель" на React + Flask
+              </li>
+              <li class="experience__block-li changed" id="secondExp2">
+                На клиентской части: react, react-router-dom, useReducer,
+                AppContext
+              </li>
+              <li class="experience__block-li changed" id="secondExp3">
+                На серверной части: flask, flask-sqlalchemy, flask-jwt-extended,
+                flask-cors
+              </li>
+              <li class="experience__block-li changed" id="secondExp4">
+                Использование архитектуры Feature-Sliced Design
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="tools">
+        <h2 class="title">Tools</h2>
+
+        <div class="tools__content">
+          <div class="tools__category">
+            <div
+              class="tools__category-title"
+            >
+              <div
+                class="changed"
+                id="toolCode"
+                data-max="12"
+              >
+                code
+              </div>
+            </div>
+
+            <div class="tools__category-content">
+              <img
+                src="/src/assets/icons/html.png"
+                alt="html"
+                class="tools__category-left"
+              />
+              <img
+                src="/src/assets/icons/css.png"
+                alt="css"
+                class="tools__category-right"
+              />
+              <img
+                src="/src/assets/icons/js.png"
+                alt="js"
+                class="tools__category-left"
+              />
+              <img
+                src="/src/assets/icons/ts.png"
+                alt="ts"
+                class="tools__category-right"
+              />
+              <img
+                src="/src/assets/icons/react.png"
+                alt="react"
+                class="tools__category-left"
+              />
+              <img
+                src="/src/assets/icons/sass.png"
+                alt="sass"
+                class="tools__category-right"
+              />
+              <img
+                src="/src/assets/icons/python.png"
+                alt="python"
+                class="tools__category-left"
+              />
+            </div>
+          </div>
+
+          <div class="tools__category">
+            <div
+              class="tools__category-title"
+            >
+              <div
+                id="toolTools"
+                data-max="12"
+                class="changed"
+              >
+                tools
+              </div>
+            </div>
+
+            <div class="tools__category-content">
+              <img
+                src="/src/assets/icons/vsc.png"
+                alt="html"
+                class="tools__category-left"
+              />
+              <img
+                src="/src/assets/icons/figma.png"
+                alt="css"
+                class="tools__category-right"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education">
+        <h2 class="title">Education</h2>
+
+        <div class="education__content">
+          <div class="education__block education__block--main">
+            <img src="/src/assets/icons/heart.png" alt="Like" />
+            <div
+              class="education__block-year changed"
+              id="firstEduDate"
+              data-max="14"
+            >
+              2022 - 2026
+            </div>
+            <div class="education__block-name changed" id="firstEduName">
+              Информационная безопасность
+            </div>
+            <div class="education__block-tags changed" id="firstEduTags">
+              #ВШЭ #Криптография #Матан #Теория вероятности #Python #C/C++ #Сети
+              #Симулятор беспилотного транспорта #Линейная алгебра #CODING
+              #Frontend #Проекты
+            </div>
+            <div class="education__block-place changed" id="firstEduInst">
+              МИЭМ, НИУ ВШЭ
+            </div>
+          </div>
+
+          <div class="education__block">
+            <div
+              class="education__block-year changed"
+              id="secondEduDate"
+              data-max="14"
+            >
+              2022
+            </div>
+            <div class="education__block-name changed" id="secondEduName">
+              Web-разработчик
+            </div>
+            <div class="education__block-tags changed" id="secondEduTags">
+              #HTML #CSS #JavaScript #React #Sass
+            </div>
+            <div class="education__block-place changed" id="secondEduInst">
+              udemy
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interests">
+        <h2 class="title">Interests</h2>
+
+        <div class="interests__content">
+          <div class="interests__element changed" id="int1">Frontend</div>
+          <div class="interests__element changed" id="int2">Computers</div>
+          <div class="interests__element changed" id="int3">JavaScript</div>
+          <div class="interests__element changed" id="int4">Learn to code</div>
+          <div class="interests__element changed" id="int5">
+            Backend (a little)
+          </div>
+          <div class="interests__element changed" id="int6">Python</div>
+          <div class="interests__element changed" id="int7">Sport</div>
+          <div class="interests__element changed" id="int8">Rock music</div>
+          <div class="interests__element changed" id="int9">Cars</div>
+        </div>
+      </section>
+
+      <section class="mail">
+        <h2 class="title title-white">
+          Let´s chat! I´m ready to work on excinting projects
+        </h2>
+        <div class="mail__content changed" id="changedMail">
+          krllssrgv@yandex.ru
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,46 @@
+.languages { 
+    grid-area: div3;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.languages__data {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.languages__names div {
+    line-height: 11px;
+    font-size: 10px;
+    font-weight: 500;
+    max-width: 75px;
+    margin-bottom: 10px;
+}
+
+
+.languages__names div:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.languages__levels {
+    width: 168px;
+}
+
+
+.languages__levels div {
+    background-color: #28D979;
+    height: 11px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+
+.languages__levels div:last-of-type {
+    margin-bottom: 0;
+}
